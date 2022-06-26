@@ -29,14 +29,13 @@ async function analyzeImage(img) {
    const uriBase = process.env.ENDPOINT + '/face/v1.0/detect';
   let params = new URLSearchParams({
     returnFaceId: "true",
-    returnFaceAttributes: 'emotion', //FILL IN THIS LINE
+    returnFaceAttributes: 'emotion' //FILL IN THIS LINE
   })
   let resp = await fetch(uriBase + "?" + params.toString(), {
     method: "POST", //WHAT TYPE OF REQUEST?
     body: "img", //WHAT ARE WE SENDING TO THE API?
     headers: {
-      'Content-Type': 'application/octet-stream', //do this in the next section
-      "0cp-Apim-Subscription-Key": subscriptionKey
+     '<HEADER NAME>': '<HEADER VALUE>'
     }
   });
   let data = await resp.json();
