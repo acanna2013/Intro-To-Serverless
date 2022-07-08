@@ -67,9 +67,10 @@ module.exports = async function (context, req) {
 
     context.log(jsonData);
     context.res = {
-        // status: 200, /* Defaults to 200 */
-        body: 
-        jsonData.data.url
+      // status: 200, /* Defaults to 200 */
+      body: {
+        main_emotion,
+      },
     };
     console.log(result)
     context.done();
